@@ -44,7 +44,7 @@ AutoPlay.handleClicking = function() {
   if (!Game.Achievements["Neverclick"].won && (Game.cookieClicks<=15) ) return;
   if (AutoPlay.endPhase() && !Game.Achievements["True Neverclick"].won && (!Game.cookieClicks) ) return;
   if(!Game.Achievements["Uncanny clicker"].won) { for(i=0; i<10; i++) setTimeout(Game.ClickCookie, 50*i); }
-  Game.ClickCookie();
+  for(i=0; i<13; i++) setTimeout(Game.ClickCookie, i);
 }
 
 //===================== Handle Upgrades ==========================
