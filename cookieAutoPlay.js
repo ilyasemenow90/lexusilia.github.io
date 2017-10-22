@@ -28,14 +28,6 @@ AutoPlay.run = function () {
 AutoPlay.preNightMode = function() { var h=(new Date).getHours(); return(h>=22); }
 
 AutoPlay.nightMode = function() { 
-  if (AutoPlay.night) AutoPlay.useLump();
-  AutoPlay.night=false;
-  var gs=Game.Upgrades["Golden switch [on]"]; if(gs.unlocked) {
-    if (Game.isMinigameReady(Game.Objects["Temple"])) {
-      AutoPlay.removeSpirit(1,"asceticism");
-    }
-  } 
-  gs.buy();
   return false;
 }
 
