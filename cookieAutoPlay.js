@@ -33,7 +33,8 @@ AutoPlay.nightMode = function() {
   var gs=Game.Upgrades["Golden switch [on]"]; if(gs.unlocked) {
     if (Game.isMinigameReady(Game.Objects["Temple"])) {
       AutoPlay.removeSpirit(1,"asceticism");
-    } 
+    }
+  } 
   gs.buy();
   return false;
 }
